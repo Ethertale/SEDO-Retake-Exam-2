@@ -43,16 +43,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            junit '**/TestResults/*.xml'
-        }
-        success {
-            echo 'Build & Tests passed successfully!'
-        }
-        failure {
-            echo 'Build or Tests failed!'
-        }
-    }
 }
