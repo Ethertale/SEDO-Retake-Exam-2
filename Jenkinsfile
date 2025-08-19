@@ -17,7 +17,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Ethertale/SEDO-Retake-Exam-2.git'
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/Ethertale/SEDO-Retake-Exam-2.git']]
+                ])
             }
         }
 
