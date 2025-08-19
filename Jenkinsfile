@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/<your-username>/SEDO-Retake-Exam-2.git'
+                git branch: 'main', url: 'https://github.com/Ethertale/SEDO-Retake-Exam-2.git'
             }
         }
 
